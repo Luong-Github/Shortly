@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shortly.Application.Dependencies.Repositories
+namespace Shortly.Contract.DependencyInjections.Repositories
 {
     public interface IRepositoryDbContext<TDbContext, TEntity, in TKey>
         where TDbContext : DbContext

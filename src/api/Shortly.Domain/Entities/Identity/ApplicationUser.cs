@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Shortly.Domain.Abstractions.IEntities;
+using Shortly.Domain.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace Shortly.Domain.Entities.Identity
@@ -37,9 +38,9 @@ namespace Shortly.Domain.Entities.Identity
 
         #endregion
 
-        //public UserStatus UserStatus { get; set; }
+        public UserStatus UserStatus { get; set; }
 
-        //public AccountStatus AccountStatus { get; set; }
+        public AccountStatus AccountStatus { get; set; }
 
         public DateTimeOffset CreatedDate { get; set; }
 
