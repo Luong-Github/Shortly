@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shortly.Application.Dependencies.Repositories
+namespace Shortly.Contract.DependencyInjections.Repositories
 {
     public interface IRepositoryBase<TEntity, in TKey>
         where TEntity : class
