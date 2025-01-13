@@ -58,7 +58,6 @@ ClientBin/
 /*.log
 /src/api/DIS.Api/Logs
 global.json
-appsettings.development.json
 nuget.config
 NuGet.config
 /NuGet.config
