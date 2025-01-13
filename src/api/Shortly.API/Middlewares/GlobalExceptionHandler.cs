@@ -11,7 +11,7 @@ namespace Shortly.API.Middlewares
         
         public GlobalExceptionHandler(ILoggerManager logger) {  _logger = logger; }
 
-        public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
+        public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken) 
         {
             httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             httpContext.Response.ContentType = "application/json";
@@ -31,6 +31,8 @@ namespace Shortly.API.Middlewares
             }.ToString(), cancellationToken).ConfigureAwait(false);
 
             return true;
+
+
 
         }
     }

@@ -30,15 +30,40 @@ namespace Shortly.API.Extensions
 
 
             services.AddHttpContextAccessor();
-            //services.AddTransient<IUserServices, UserServices>();
 
             services.AddSwaggerGen(
                 options =>
                 {
+                    // Add JWT Bearer authentication
+                    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                    {
+                        Name = "Authorization",
+                        Type = SecuritySchemeType.ApiKey,
+                        Scheme = "Bearer",
+                        BearerFormat = "JWT",
+                        In = ParameterLocation.Header,
+                        Description = "Enter 'Bearer' [space] and then your token in the text input below. Example: 'Bearer eyJhbGci...'"
+                    });
+
                     options.SwaggerDoc("v1", new OpenApiInfo()
                     {
                         Title = "Shorten URL",
                         Version = "v1"
+                    });
+
+                    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+                    {
+                        {
+                            new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "Bearer"
+                                }
+                            },
+                            Array.Empty<string>()
+                        }
                     });
                 });
 

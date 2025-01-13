@@ -16,5 +16,9 @@ namespace Shortly.Domain.Entities.Identity
         public virtual ICollection<IdentityRoleClaim<Guid>> Claims { get; set; }
 
         public virtual ICollection<IdentityUserRole<Guid>> Roles { get; set; }
+
+        public ApplicationRole() { }
+
+        public ApplicationRole(string roleName) : base(roleName) { }
     }
 }

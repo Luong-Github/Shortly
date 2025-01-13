@@ -19,6 +19,8 @@ namespace Shortly.Persistence.Contexts
 
         public DbSet<ApplicationRole> ApplicationRoles { get; set; }
 
+        public DbSet<TokenInfo> TokenInfos { get; set; }
+
         public DbSet<Url> Urls { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

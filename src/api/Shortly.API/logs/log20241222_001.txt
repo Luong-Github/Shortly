@@ -1,0 +1,36 @@
+2024-12-22 14:40:58.046 +07:00 [ERR] Something went wrong, System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Shortly.API.Extensions.JwtExtension.<>c__DisplayClass0_0.<AddJwtAuthentication>b__1(JwtBearerOptions jwt) in G:\FPT-learner\Shorten-Url\src\api\Shortly.API\Extensions\JwtExtension.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-12-22 14:44:35.510 +07:00 [INF] Start database migration...
+2024-12-22 14:44:37.059 +07:00 [INF] Database migration completed successfully.
+2024-12-22 14:44:38.626 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 160.9074 ms
+2024-12-22 14:44:39.148 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 120.2258 ms
+2024-12-22 14:45:34.202 +07:00 [INF] Start database migration...
+2024-12-22 14:45:35.892 +07:00 [INF] Database migration completed successfully.
+2024-12-22 14:45:37.449 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 155.5237 ms
+2024-12-22 14:45:37.939 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 107.1578 ms
+2024-12-22 15:07:49.660 +07:00 [INF] Start database migration...
+2024-12-22 15:07:52.291 +07:00 [INF] Database migration completed successfully.
+2024-12-22 15:07:53.930 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 144.8781 ms
+2024-12-22 15:07:54.463 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 115.7185 ms
+2024-12-22 15:08:15.167 +07:00 [INF] HTTP POST /api/v1/Url responded 401 in 9638.5205 ms
+2024-12-22 15:11:09.325 +07:00 [INF] Start database migration...
+2024-12-22 15:11:10.874 +07:00 [INF] Database migration completed successfully.
+2024-12-22 15:11:12.477 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 154.2621 ms
+2024-12-22 15:11:12.970 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 109.1117 ms
+2024-12-22 15:11:20.938 +07:00 [INF] HTTP POST /api/v1/Url responded 401 in 88.2022 ms

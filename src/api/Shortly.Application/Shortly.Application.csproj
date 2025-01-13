@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <Folder Include="Constants\" />
-    <Folder Include="Dependencies\" />
+    <Folder Include="Features\V1\Auth\" />
     <Folder Include="Features\V1\Urls\Models\" />
     <Folder Include="Mappings\" />
     <Folder Include="Utils\" />
