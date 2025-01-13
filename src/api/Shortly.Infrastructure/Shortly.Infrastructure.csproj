@@ -18,15 +18,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shortly.Contract\Shortly.Contract.csproj" />
-    <ProjectReference Include="..\Shortly.Domain\Shortly.Domain.csproj" />
+    <ProjectReference Include="..\Shortly.Application\Shortly.Application.csproj" />
     <ProjectReference Include="..\Shortly.Persistence\Shortly.Persistence.csproj" />
-    <ProjectReference Include="..\Shortly.Share\Shortly.Share.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\" />
-    <Folder Include="Extensions\" />
+    <Folder Include="DependencyInjections\Extensions\" />
+    <Folder Include="Authentications\" />
+    <Folder Include="Providers\" />
   </ItemGroup>
 
 </Project>

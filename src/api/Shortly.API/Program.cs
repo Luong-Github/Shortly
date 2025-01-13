@@ -2,16 +2,19 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Shortly.API.Extensions;
 using Shortly.API.Middlewares;
+using Shortly.Application.Abstractions;
 using Shortly.Application.Extensions;
+using Shortly.Infrastructure.Abstractions;
 using Shortly.Persistence.Contexts;
+using Shortly.Persistence.DataSeeder;
 using Shortly.Persistence.Extensions;
-using Shortly.Persistence.Options;
 using static Shortly.Infrastructure.InfrastructureStartup;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Configuration setup
 var configuration = builder.Configuration;
+
 
 // Serilog setup
 Log.Logger = new LoggerConfiguration()
@@ -24,13 +27,16 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 
 // Register services
+builder.Services.AddJwtAuthentication(configuration);
 builder.Services.AddHealthChecks();
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.ConfigureServices();
-builder.Services.AddInfrastructureConfigureServices();
-builder.Services.ApplicationServiceConfigure();
 builder.Services.AddSqlServerPersistence(configuration);
 builder.Services.PersistenceConfigureServices();
+
+builder.Services.AddIdentityExtensions(configuration);
+builder.Services.ApplicationServiceConfigure();
+builder.Services.AddInfrastructureConfigureServices();
 
 var app = builder.Build();
 
@@ -51,6 +57,10 @@ using (var scope = app.Services.CreateScope())
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
         context.Database.Migrate();
         Log.Logger.Information("Database migration completed successfully.");
+
+        // Call the seedData method after migration
+        // await DbSeeder.SeedData(app);
+        Log.Logger.Information("Data seeding completed successfully");
     }
     catch (Exception ex)
     {
@@ -65,7 +75,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

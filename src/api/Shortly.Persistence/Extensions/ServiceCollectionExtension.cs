@@ -23,9 +23,6 @@ namespace Shortly.Persistence.Extensions
             // Bind DatabaseOptions from appsettings.json
             services.Configure<DatabaseOptions>(configuration.GetSection("DatabaseOptions"));
 
-            // Bind IdentityOptions from appsettings.json
-            services.Configure<IdentityOptions>(configuration.GetSection("IdentityOptions"));
-
             // Configure DbContext with SQL Server
             services.AddDbContextPool<ApplicationDbContext>((provider, optionsBuilder) =>
             {
@@ -44,17 +41,6 @@ namespace Shortly.Persistence.Extensions
                     .EnableDetailedErrors(databaseOptions.EnableDetailError)
                     .EnableSensitiveDataLogging(databaseOptions.EnableSensitiveDataLogging);
             });
-
-            // Configure Identity
-            services.AddIdentityCore<ApplicationUser>(options => { })
-                .AddRoles<ApplicationRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-
-            // Load PasswordValidatorOptions from appsettings.json
-            var serviceProvider = services.BuildServiceProvider();
-            var passwordValidatorOptions = serviceProvider.GetService<IOptionsMonitor<PasswordValidatorOptions>>();
-
-            services.Configure<PasswordValidatorOptions>(configuration.GetSection("PasswordOptions"));
         }
 
         public static void PersistenceConfigureServices(this IServiceCollection services)

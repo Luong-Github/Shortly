@@ -30,7 +30,9 @@ namespace Shortly.Application.Features.V1.Urls.Dependencies
 
         public async Task<string> CreateShortenUrlAsync(string originalUrl)
         {
-            string shortenedUrl = string.Empty;
+            string shortenedUrl = GenerateShortenURL(originalUrl);
+
+            return shortenedUrl;
 
             // Start the transaction
             await _unitOfWork.BeginTransactionAsync();

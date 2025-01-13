@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  shortly.api:
+    image: ${DOCKER_REGISTRY-}shortlyapi
+    container_name: shortly.api
+    build:
+      context: src/api/Shortly.API
+      dockerfile: Dockerfile
+    ports:
+        - "5030:5030"
+        - "7213:7213"
+  shortly.database:
+    image: mssql:latest
+    container_name: shortly.database
+    environment:
+        - MSSQL_DB=ShortenUrl

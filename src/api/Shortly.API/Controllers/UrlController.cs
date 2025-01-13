@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Shortly.API.Models.Url;
 using Shortly.Application.Features.V1.Urls.Dependencies;
 using Shortly.Contract.Dependencies.Services;
@@ -20,7 +22,8 @@ namespace Shortly.API.Controllers
             _logger = logger;
         }
 
-        [HttpPost]
+        [HttpPost("create-short-url")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<string> CreateShortUrlAsync(CreateShortenUrlModel model)
         {
             _logger.LogInfo($"Start shortening url {model.OriginalUrl}");

@@ -1,0 +1,14 @@
+2025-01-12 01:30:08.374 +07:00 [INF] Start shortening url https://localhost:7213/swagger/index.html
+2025-01-12 01:34:02.461 +07:00 [INF] Start database migration...
+2025-01-12 01:34:04.597 +07:00 [INF] Database migration completed successfully.
+2025-01-12 01:34:04.600 +07:00 [INF] Data seeding completed successfully
+2025-01-12 01:34:06.565 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 170.0453 ms
+2025-01-12 01:34:07.179 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 154.7211 ms
+2025-01-12 01:34:32.352 +07:00 [INF] HTTP POST /api/v1/Url/create-short-url responded 302 in 46.9304 ms
+2025-01-12 01:34:32.368 +07:00 [INF] HTTP GET /Account/Login responded 404 in 4.2292 ms
+2025-01-12 01:41:19.313 +07:00 [INF] Start database migration...
+2025-01-12 01:41:21.460 +07:00 [INF] Database migration completed successfully.
+2025-01-12 01:41:21.464 +07:00 [INF] Data seeding completed successfully
+2025-01-12 01:41:23.113 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 154.1576 ms
+2025-01-12 01:41:23.615 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 151.1248 ms
+2025-01-12 01:41:38.310 +07:00 [INF] HTTP POST /api/v1/Url/create-short-url responded 200 in 8751.3475 ms
