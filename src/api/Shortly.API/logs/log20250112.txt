@@ -1,0 +1,8 @@
+2025-01-12 01:20:46.725 +07:00 [INF] Start database migration...
+2025-01-12 01:20:49.596 +07:00 [INF] Database migration completed successfully.
+2025-01-12 01:20:49.600 +07:00 [INF] Data seeding completed successfully
+2025-01-12 01:20:51.516 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 204.3526 ms
+2025-01-12 01:20:52.025 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 188.2289 ms
+2025-01-12 01:21:14.511 +07:00 [INF] HTTP POST /api/v1/Url responded 200 in 1283.6773 ms
+2025-01-12 01:22:43.262 +07:00 [INF] HTTP POST /api/v1/Url responded 200 in 110.2404 ms
+2025-01-12 01:22:59.083 +07:00 [INF] HTTP POST /api/v1/Url responded 200 in 5317.3465 ms

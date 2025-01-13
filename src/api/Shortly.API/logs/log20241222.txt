@@ -1,0 +1,50 @@
+2024-12-22 14:39:03.017 +07:00 [INF] Start database migration...
+2024-12-22 14:39:06.882 +07:00 [INF] Database migration completed successfully.
+2024-12-22 14:39:09.425 +07:00 [INF] HTTP GET /swagger responded 301 in 45.0558 ms
+2024-12-22 14:39:09.791 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 172.3503 ms
+2024-12-22 14:39:10.124 +07:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 61.6624 ms
+2024-12-22 14:39:10.146 +07:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 83.8293 ms
+2024-12-22 14:39:10.169 +07:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 106.9687 ms
+2024-12-22 14:39:10.433 +07:00 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 0.3426 ms
+2024-12-22 14:39:10.536 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 135.7594 ms
+2024-12-22 14:40:30.194 +07:00 [INF] Start database migration...
+2024-12-22 14:40:31.843 +07:00 [INF] Database migration completed successfully.
+2024-12-22 14:40:33.411 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 168.5237 ms
+2024-12-22 14:40:34.048 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 144.6812 ms
+2024-12-22 14:40:57.982 +07:00 [ERR] HTTP POST /api/v1/Url responded 500 in 13031.6207 ms
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Shortly.API.Extensions.JwtExtension.<>c__DisplayClass0_0.<AddJwtAuthentication>b__1(JwtBearerOptions jwt) in G:\FPT-learner\Shorten-Url\src\api\Shortly.API\Extensions\JwtExtension.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-12-22 14:40:58.023 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Shortly.API.Extensions.JwtExtension.<>c__DisplayClass0_0.<AddJwtAuthentication>b__1(JwtBearerOptions jwt) in G:\FPT-learner\Shorten-Url\src\api\Shortly.API\Extensions\JwtExtension.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
