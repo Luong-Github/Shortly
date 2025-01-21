@@ -1,0 +1,2 @@
+2025-01-19 15:45:56.625 +07:00 [INF] Start shortening url https://localhost:7213/swagger/index.html
+2025-01-19 15:47:50.039 +07:00 [INF] Start shortening url https://localhost:7213/swagger/index.html

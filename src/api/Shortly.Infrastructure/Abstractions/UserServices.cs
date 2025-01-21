@@ -64,7 +64,16 @@ namespace Shortly.Infrastructure.Abstractions
 
         public Task<TokenRefreshResponse> RefreshTokenAsync(TokenRefreshRequest request)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Check that refresh in available in db 
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
         }
 
         public async Task<(RegisterResponse?, string?)> RegisterAsync(RegisterRequest request)
