@@ -19,7 +19,7 @@ namespace Shortly.Infrastructure
     {
         public static void AddInfrastructureConfigureServices(this IServiceCollection services)
         {
-            services.AddTransient<IJwtTokenService,  JwtTokenService>();
+            services.AddScoped<IJwtTokenService>();
 
             services.AddTransient<IUserServices, UserServices>();
             // configure for application user

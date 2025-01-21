@@ -40,6 +40,8 @@ builder.Services.AddInfrastructureConfigureServices();
 
 var app = builder.Build();
 
+await DbSeeder.SeedData(app);
+
 // Exception handling middleware
 app.UseExceptionHandler(opt =>
 {
